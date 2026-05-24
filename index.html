@@ -299,6 +299,9 @@
     }
 
     /* ─── EXPERIENCE ─── */
+    .exp-list { display: flex; flex-direction: column; gap: 20px; }
+
+    /* ─── EXPERIENCE ─── */
     .exp-card {
       background: var(--white);
       border: 1px solid var(--gray-border);
@@ -569,18 +572,47 @@
     <section id="experience">
       <p class="section-kicker reveal">Experience</p>
       <h2 class="section-title reveal d1">経歴</h2>
-      <div class="exp-card reveal d2" id="exp-card">
-        <div class="exp-icon">🏢</div>
-        <div>
-          <p class="exp-company">パルコレ合同会社</p>
-          <div class="exp-meta">
-            <span class="exp-meta-item"><span class="exp-meta-dot"></span>代表</span>
-            <span class="exp-meta-item"><span class="exp-meta-dot"></span>在籍 6年</span>
+      <div class="exp-list">
+        <div class="exp-card reveal d2" id="exp-card">
+          <div class="exp-icon">🏢</div>
+          <div>
+            <p class="exp-company">PerCoRe合同会社</p>
+            <div class="exp-meta">
+              <span class="exp-meta-item"><span class="exp-meta-dot"></span>代表</span>
+              <span class="exp-meta-item"><span class="exp-meta-dot"></span>在籍 6年（2020年〜）</span>
+            </div>
+          </div>
+          <div class="exp-years-badge">
+            <div class="exp-years-num"><span class="counter" data-target="6">0</span></div>
+            <div class="exp-years-label">Years</div>
           </div>
         </div>
-        <div class="exp-years-badge">
-          <div class="exp-years-num"><span class="counter" data-target="6">0</span></div>
-          <div class="exp-years-label">Years</div>
+        <div class="exp-card reveal d2">
+          <div class="exp-icon">🎯</div>
+          <div>
+            <p class="exp-company">MKG株式会社</p>
+            <div class="exp-meta">
+              <span class="exp-meta-item"><span class="exp-meta-dot"></span>CMO</span>
+              <span class="exp-meta-item"><span class="exp-meta-dot"></span>在籍 4ヶ月（2019年〜）</span>
+            </div>
+          </div>
+          <div class="exp-years-badge">
+            <div class="exp-years-num">4</div>
+            <div class="exp-years-label">Months</div>
+          </div>
+        </div>
+        <div class="exp-card reveal d2">
+          <div class="exp-icon">🛍️</div>
+          <div>
+            <p class="exp-company">有限会社セレクト（現：株式会社セレクト）</p>
+            <div class="exp-meta">
+              <span class="exp-meta-item"><span class="exp-meta-dot"></span>在籍 6年（2013年〜2019年）</span>
+            </div>
+          </div>
+          <div class="exp-years-badge">
+            <div class="exp-years-num"><span class="counter" data-target="6">0</span></div>
+            <div class="exp-years-label">Years</div>
+          </div>
         </div>
       </div>
     </section>
@@ -809,7 +841,7 @@
           }
         });
       }, { threshold: 0.4 });
-      document.querySelectorAll('.stat-strip, #exp-card').forEach(el => obs.observe(el));
+      document.querySelectorAll('.stat-strip, .exp-card').forEach(el => obs.observe(el));
     })();
 
     /* ── 3D CARD TILT ── */
